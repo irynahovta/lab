@@ -10,7 +10,7 @@ app = Flask(__name__)
 def hello_world():
     return "Hello World!"
 
-# Завдання 3: GET-запит зі шляхом та параметрами (Кинути запит: .../currency?key=today)
+# Завдання 3: GET-запит зі шляхом та параметрами 
 @app.route("/currency", methods=["GET"])
 def static_currency():
     param = request.args.get("key", "default")
@@ -19,7 +19,7 @@ def static_currency():
     else:
         return f"Invalid parameter: {param}"
 
-# Завдання 4: Обробка заголовків (Кинути запит: .../content?content_type=application/xml)
+# Завдання 4: Обробка заголовків 
 @app.route("/content", methods=["GET"])
 def content_handler():
     # Перевірка заголовка Content-Type
@@ -40,7 +40,7 @@ def content_handler():
         return "This is plain text content"
 
 
-# Завдання 5: Динамічний курс валют із НБУ (Кинути запит: .../currency_dynamic?param=today)
+# Завдання 5: Динамічний курс валют із НБУ 
 @app.route("/currency_dynamic", methods=["GET"])
 def dynamic_currency():
     param = request.args.get("param")
