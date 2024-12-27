@@ -5,7 +5,7 @@ import sqlite3
 app = Flask(__name__)
 auth = HTTPBasicAuth()
 
-# Імітація бази користувачів (можна змінити на файл або SQLite)
+# Імітація бази користувачів
 users = {
     "admin": "password",
     "user": "1234"
