@@ -1,7 +1,6 @@
 # Завдання 1. [Easy] Отримання курсу валют із сайту НБУ за допомогою Postman
 # 
 # https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?date=YYYYMMDD&json
-# Заміни YYYYMMDD на дату у цьому форматі
 
 # Завдання 2. [Easy] Отримання курсу валют із сайту НБУ за допомогою Python
 import requests
@@ -73,7 +72,7 @@ async def telegram_tasks():
         print(f"User: {user.id}, Username: {user.username}, Name: {user.first_name} {user.last_name}")
 
     # Відправка повідомлення
-    user_id = '+380669418450' #нік чи номер телефону
+    user_id = '+380669418450' #номер телефону
     await client.send_message(user_id, 'Hello from Python!')
 
     # Публікація повідомлення в чат/паблік
@@ -94,7 +93,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.utils.i18n import I18n
 
 # Налаштування токена
-API_TOKEN = '8104307737:AAEhgWsEQveNkCB2NwfWK1KyyQXCjyX35uo' #API для свого бота
+API_TOKEN = '8104307737:AAEhgWsEQveNkCB2NwfWK1KyyQXCjyX35uo' #API для бота
 
 # Включення логування
 logging.basicConfig(level=logging.INFO)
@@ -147,3 +146,4 @@ async def main():
 if __name__ == "__main__":
     import asyncio
     asyncio.run(main())
+
